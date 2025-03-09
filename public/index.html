@@ -127,6 +127,10 @@
             <button onclick="filterBySeries('Animal Crossing')">
               Animal Crossing
             </button>
+
+            <button onclick="filterBySeries('Pokemon')">
+                Pokemon
+            </button>
         
             <button onclick="filterBySeries('The Legend of Zelda')">
               The legend of Zelda
@@ -224,7 +228,7 @@ let state = [];
 async function getData(){
     const response = await fetch('https://amiiboapi.com/api/amiibo/?showusage');
     const data = await response.json();
-    return data.amiibo.slice(0, 400);
+    return data.amiibo.slice(0, 1500);
 }
 
     async function showAllGames(){
